@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden; /*hides the expanding and shrinking scrollbar*/
+}
+.sky{
+    background-image: url("Car Animated/background.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+.trees{
+    background-image: url("Car Animated/trees.png");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+}
+.track{
+    background-image: url("Car Animated/track.png");
+    background-repeat: repeat-x;
+    height: 30vh;
+    width: 800vw;
+    position: absolute;
+    top: 80vh;
+    animation: carMove linear .6s infinite;
+}
+.car{
+    background-image: url("Car Animated/car_body.png");
+    background-size: cover;
+    height: 17vh;
+    width: 63vh;
+    position: absolute;
+    top: 63vh;
+    left: 39vh;
+    background-repeat: no-repeat;
+    animation: shake linear 3s infinite;
+}
+.wheel1 img{
+    width: 81px;
+    position: relative;
+    top: 48px;
+    left: 56px;
+    animation: wheelRotation linear .6s infinite;
+}
+.wheel2 img{
+    width: 81px;
+    position: relative;
+    bottom: 34px;
+    left: 280px;
+    animation: wheelRotation linear .6s infinite;
+}
+
+@keyframes wheelRotation {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carMove {
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+
+@keyframes shake {
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
